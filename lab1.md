@@ -5,9 +5,11 @@ Go to the Visual Studio Code website at [https://code.visualstudio.com/](https:/
 
 ![Image](VScode.png)
 ## 2) Remotely connecting
-If you are using a windows device, install [git for windows](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) and use the steps in [this post](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) to enable <git bash> to be used by your default terminal.
-Now, in a new terminal on VScode, paste the following <ssh cs15lwi23zz@ieng6.ucsd.edu> 
+If you are using a windows device, install [git for windows](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) and use the steps in [this post](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) to enable <mark>git bash</mark> to be used by your default terminal.
+Now, in a new terminal on VScode, paste the following <mark>ssh cs15lwi23zz@ieng6.ucsd.edu</mark>.
 Replace "zz" by the letters in your course specific account. Now, continue by logging in. If you are logging in for the first time, you may get a message that says "Are you sure you want to continue connecting?". Reply to this with "yes". Now, this is what the rest of the procedure looks like, along with the output that you should get after entering the password:
 
 ![Image](Remotely Connecting.png)
 ## 3) Trying some commands
+After having logged in, try out a few commands on your terminal. Examples would include cd, cd ~, ls, and ls -at.
+
