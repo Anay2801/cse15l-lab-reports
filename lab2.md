@@ -72,7 +72,7 @@ public void testReversed1() {
 }
 ```
 - The symptom, which is a screenshot of the output obtained when the above 2 tests are run:
-![Image](symptom.png)
+![Image](symptom.jpeg)
 - The buggy code and the corrected code:
 Buggy code:
 '''
