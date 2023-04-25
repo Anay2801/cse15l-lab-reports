@@ -15,12 +15,16 @@ After having logged in, try running a few commands like ``cd``, ``ls``, ``pwd``,
 
 Here are a few commands that I ran and the output obtained:
 - ``pwd`` - prints the working directory
+![Image](pwd.png)
 - ``cd ..`` - changes the directory to the one 'outside' or 'above' the current directory
+![Image](cd ...png)
 - ``cd ~`` - changes to the home directory
+![Image](cd ~.png)
 - ``ls`` - lists the files and floders in the current path
+![Image](ls.png)
 - ``cat`` - prints the content of the file(s)
+![Image](cat.png)
 - ``ls -lat`` - lists all files and directories in the current working directory
-
-![Image](Commands.png)
+![Image](ls -lat.png)
 
 Following this simple 3-step procedure will ensure that you are connected to your course specific account seamlessly.
