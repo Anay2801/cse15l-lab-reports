@@ -54,7 +54,49 @@ Here are 2 screenshots of using ```/add-message``` and an explanation of how the
 - The relevant argument to the handleRequest method is the URI object, which contains information about the request URL such as the path and query string.
 - The relevant field of the Handler class is the message field, which stores the current string being tracked by the server. From this specific request, the value of the message field changed from "food\n" to "food\nwater\n". This is because the new value "water" was concatenated with a new line character to the existing value "food" using the += operator.
   
- ## Part 2
- ## Part 3
- CSE 15L labs, in general, have been extremely fascinating to me due to the fact that I always get to learn and work with concepts I have little knowledge about. During weeks 2 and 3 I learnt many things that I had no prior exposure to. Specifically, creating a basic server and a search engine was something I enjoyed a lot. Like most people,I have been using complex search engines like Google almost everyday. The fact that I could create even such a simplified version was exciting for me. Additionally, going forward with these tasks and discussion with peers in the lab helped me enhance my coding skills and CS knowledge in general.   
+## Part 2
+In part 2 of this lab report involves using jUnit to identify buggy code and fix it. I will be using the method reversed(int[] arr) in ArrayExamples.java that we were provided in week 3.
+A failure inducing input for this method:
+```
+@Test
+public void testReversedError2() {
+    int[] input1 = {1,2,3,4,5};
+    assertArrayEquals(new int[]{5,4,3,2,1}, ArrayExamples.reversed(input3));
+}
+
+```
+- An input that doesn't induce failure:
+```
+@Test
+public void testReversed1() {
+    int[] input2 = { };
+    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input2));
+}
+```
+- The symptom, which is a screenshot of the output obtained when the above 2 tests are run:
+![Image](symptom.png)
+- The buggy code and the corrected code:
+Buggy code:
+'''
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```    
+Corrected code:
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+        newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+}
+```
+
+## Part 3
+CSE 15L labs, in general, have been extremely fascinating to me due to the fact that I always get to learn and work with concepts I have little knowledge about. During weeks 2 and 3 I learnt many things that I had no prior exposure to. Specifically, creating a basic server and a search engine was something I enjoyed a lot. Like most people,I have been using complex search engines like Google almost everyday. The fact that I could create even such a simplified version was exciting for me. Additionally, going forward with these tasks and discussion with peers in the lab helped me enhance my coding skills and CS knowledge in general.   
  
