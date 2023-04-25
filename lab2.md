@@ -58,11 +58,12 @@ Here are 2 screenshots of using ```/add-message``` and an explanation of how the
 In part 2 of this lab report involves using jUnit to identify buggy code and fix it. I will be using the method reversed(int[] arr) in ArrayExamples.java that we were provided in week 3.
 A failure inducing input for this method:
 
-'''@Test
+```@Test
 public void testReversedError2() {
     int[] input1 = {1,2,3,4,5};
     assertArrayEquals(new int[]{5,4,3,2,1}, ArrayExamples.reversed(input3));
-}```
+}
+```
 - An input that doesn't induce failure:
 
 ```@Test
@@ -75,7 +76,7 @@ public void testReversed1() {
 ![Image](symptom.jpeg)
 - The buggy code and the corrected code:
 Buggy code:
-'''
+```
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
