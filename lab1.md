@@ -14,12 +14,12 @@ Replace "zz" by the letters in your course specific account. Now, continue by lo
 After having logged in, try running a few commands like ``cd``, ``ls``, ``pwd``, ``mkdir``, and ``cp`` on your computer as well as on the remote computer after ssh-ing. Explore the commands by writing them in multiple ways with different combinations.
 
 Here are a few commands that I ran and the output obtained:
--``pwd`` - prints the working directory
--``cd ..`` - changes the directory to the one 'outside' or 'above' the current directory
--``cd ~`` - changes to the home directory
--``ls`` - lists the files and floders in the current path
--``cat`` - prints the content of the file(s)
--``ls -lat`` - lists all files and directories in the current working directory
+- ``pwd`` - prints the working directory
+- ``cd ..`` - changes the directory to the one 'outside' or 'above' the current directory
+- ``cd ~`` - changes to the home directory
+- ``ls`` - lists the files and floders in the current path
+- ``cat`` - prints the content of the file(s)
+- ``ls -lat`` - lists all files and directories in the current working directory
 
 ![Image](Commands.png)
 
