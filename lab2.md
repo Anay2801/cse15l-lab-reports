@@ -75,7 +75,7 @@ public void testReversed1() {
 - The symptom, which is a screenshot of the output obtained when the above 2 tests are run:
 ![Image](symptom.jpeg)
     
-Here, we see that after running the 2 JUnit tests as described above, there is 1 failure, which is caused by testReversed2(). The error is seen at the first element position (index 0), where the expected value is supposed to be 5, but it is 0. This symptom is caused by a bug in the code.
+Here, we see that after running the 2 JUnit tests as described above, there is 1 failure, which is caused by testReversed2(). The error is seen at the first element position (index 0), where the expected value is supposed to be 5, but it is 0, which is the default value of an integer array. This symptom is caused by a bug in the code.
 - Buggy code:
 ```
 static int[] reversed(int[] arr) {
@@ -86,7 +86,7 @@ static int[] reversed(int[] arr) {
     return arr;
   }
 ```    
-This code is buggy because it assigns the values from the input array arr to the new array newArray in reverse order, but it does not return the new array newArray which contains the reversed elements of arr. Instead, it returns the input array arr itself, which was not modified during the loop.
+This code is buggy because it assigns the values from the uninitialized newArray to the input Array and neither does it return the new array newArray. Instead, it returns the input array arr itself which now has the default 0 value as the value of all its elements.
                                   
 Corrected code:
 ```
@@ -98,8 +98,7 @@ static int[] reversed(int[] arr) {
     return newArray;
 }
 ```
-To fix the bug, the assignment in the loop should be newArray[arr.length - i - 1] = arr[i]; to correctly copy the elements from arr into newArray in reverse order. Additionally, the method should return newArray instead of arr.
+As seen in the code above, to fix the bug, the assignment in the loop should be ```newArray[arr.length - i - 1] = arr[i];``` to correctly copy the elements from arr into newArray in reverse order. Additionally, the method should return newArray instead of arr.
 
 ## Part 3
 CSE 15L labs, in general, have been extremely fascinating to me due to the fact that I always get to learn and work with concepts I have little knowledge about. During weeks 2 and 3 I learnt many things that I had no prior exposure to. Specifically, creating a basic server and a search engine was something I enjoyed a lot. Like most people,I have been using complex search engines like Google almost everyday. The fact that I could create even such a simplified version was exciting for me. Additionally, going forward with these tasks and discussion with peers in the lab helped me enhance my coding skills and CS knowledge in general.   
- 
