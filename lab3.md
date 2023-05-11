@@ -51,9 +51,9 @@ In addition to searching for files, find can also be used to search for director
 
 Example 1: Find All Directories with "r" in their Name within ./technical
 To find all directories in the ./technical directory and its subdirectories that have the word "folder" in their name, you can use the following command:
-```
-find technical -type d -name "*r*"
-```
+
+```find technical -type d -name "*r*"```
+
 Note: command ran from "stringsearch-data" directory
 
 Output:
@@ -66,9 +66,9 @@ technical/government/Env_Prot_Agen
 
 Example 2: Find a specific directory within ./technical
 To find a specific directory/directories in the ./technical directory and its subdirectories that have the name "Media", you can use the following command:
-```
-find technical -type d -name "Media"
-```
+
+```find technical -type d -name "Media"```
+
 
 Note: command ran from "stringsearch-data" directory
 
@@ -82,9 +82,8 @@ Another useful feature of find is the ability to search for files based on their
 
 Example 1: Find Files Modified in the Last 10 Days within ./technical/911report
 To find all files in the ./technical directory and its subdirectories that were modified in the last 7 days, you can use the following command:
-```
-find 911report -type f -mtime -10
-```
+
+```find 911report -type f -mtime -10```
 
 Note: command ran from "technical" directory
 
@@ -137,9 +136,8 @@ Output: After running the ls command within ./technical, we now get
 Example 2: Using rm to delete files found by find within ./technical/new
 Suppose we want to delete all .txt files found in the ./technical/new directory and its subdirectories. We can use the following command:
 
-```
-find new -name "*.txt" -exec rm {} \;
-```
+```find new -name "*.txt" -exec rm {} \;```
+
 Output: There is no output, but the .txt files in new are removed
 
 ## Conclusion
