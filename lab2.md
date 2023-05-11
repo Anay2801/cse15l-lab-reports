@@ -75,7 +75,7 @@ public void testReversed1() {
 - The symptom, which is a screenshot of the output obtained when the above 2 tests are run:
 ![Image](symptom.jpeg)
     
-Here, we see that after running the 2 JUnit tests as described above, there is 1 failure, which is caused by testReversed2(). The error is seen at the first element position (index 0), where the expected value is supposed to be 5, but it is 0, which is the default value of an integer array. This symptom is caused by a bug in the code.
+Here, we see that after running the 2 JUnit tests as described above, there is 1 failure, which is caused by testReversed2(). The error is seen at the first element position (index 0), where the expected value is supposed to be 5, but it is 0, which is the default value of the elements in an int[] array. This symptom is caused by bugs in the code.
 - Buggy code:
 ```
 static int[] reversed(int[] arr) {
