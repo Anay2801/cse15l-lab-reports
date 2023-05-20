@@ -147,6 +147,6 @@ In this report, we explored various command-line options and alternate ways to u
 [find command in Linux with examples](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
   
 ChatGPT:
-I gave ChatGPT the following prompt: What are the different ways in which I can use the "find" linux command?
-
+  
+I gave ChatGPT the following prompt - What are the different ways in which I can use the "find" linux command?
 It responded by giving me 7 different ways in which I could use the ```find``` command. I picked 2 of these ideas that I found interesting, ```-exec``` and ```-mtime```. It explained to me what these commands could be used for. I tried using these commands on my own within the stringsearch directory and decide that they were worth adding to my report.
