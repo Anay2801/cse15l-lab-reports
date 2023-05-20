@@ -1,8 +1,8 @@
 # Lab Report 3 - Researching Commands (find)
-The find command is a powerful utility for searching for files and directories within a given path. In this report, we explore four interesting command-line options or alternate ways to use the find command.
+The ```find``` command is a powerful utility for searching for files and directories within a given path. In this report, we explore four interesting command-line options or alternate ways to use the find command.
 
 ## Option 1: Find Files by Name
-One common use case of find is to search for files based on their name. The -name option allows you to search for files that match a specific pattern.
+One common use case of find is to search for files based on their name. The ```-name``` option allows you to search for files that match a specific pattern.
 
 Before beginning, the full path for ./technical is as follows: ```/home/linux/ieng6/cs15lsp23/cs15lsp23eq/stringsearch/stringsearch-data/technical```
 
@@ -47,7 +47,7 @@ plos/pmed.0010046.txt
 
 
 ## Option 2: Find Directories by Name
-In addition to searching for files, find can also be used to search for directories based on their name. The -type option can be used to specify that we are searching for directories (d) instead of files (f).
+In addition to searching for files, find can also be used to search for directories based on their name. The ```-type``` option can be used to specify that we are searching for directories (d) instead of files (f).
 
 Example 1: Find All Directories with "r" in their Name within ./technical
 To find all directories in the ./technical directory and its subdirectories that have the word "folder" in their name, you can use the following command:
@@ -78,7 +78,7 @@ technical/government/Media
 ```
 
 ## Option 3: Find Files by Modification Time
-Another useful feature of find is the ability to search for files based on their modification time. The -mtime option allows you to search for files that were modified within a specified time range.
+Another useful feature of find is the ability to search for files based on their modification time. The ```-mtime``` option allows you to search for files that were modified within a specified time range.
 
 Example 1: Find Files Modified in the Last 10 Days within ./technical/911report
 To find all files in the ./technical directory and its subdirectories that were modified in the last 7 days, you can use the following command:
@@ -117,7 +117,7 @@ Note: command ran from "technical" directory
 
 Output: there is no output because no files were modified within this time period
 
-## Option 4: Using the -exec option to perform actions on files found by find
+## Option 4: Using the ```-exec``` option to perform actions on files found by find
 The -exec option allows us to perform a command on the files found by find. The basic syntax is find <directory> -exec <command> {} \;. The {} is a placeholder for the found file(s) and \; indicates the end of the command. Here are two examples:
 
 Example 1: Using cp to copy files found by find to a new directory within ./technical
@@ -146,4 +146,6 @@ In this report, we explored various command-line options and alternate ways to u
 ## Sources used
 [find command in Linux with examples](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
   
-ChatGPT
+ChatGPT:
+I gave ChatGPT the following prompt: What are the different ways in which I can use the "find" linux command?
+It responded by giving me 7 different ways in which I could use the ```find``` command. I picked 2 of these ideas that I found interesting, ```-exec``` and ```-mtime```. It explained to me what these commands could be used for. I tried using these commands on my own within the stringsearch directory and decide that they were worth adding to my report.
