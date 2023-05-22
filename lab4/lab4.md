@@ -1,4 +1,4 @@
-# Lab Report 4
+# Lab Report 4 - Vim
 The aim of this lab report is to edit and run files from the command line using vim, and commit and push these changes onto one's Github account. There are 6 steps that can followed to achieve this objective:
 
 ## Step 1: Log into `ieng6`
