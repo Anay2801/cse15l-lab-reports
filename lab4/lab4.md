@@ -11,7 +11,7 @@ Explanation: I logged into my course-specific account on `ieng6` using the `ssh`
 
 
 ## Step 2: Clone your fork of the repository from your Github account
-Keys pressed: `git clone<space><ctrl+v><return>`
+Keys pressed: `git<space>clone<space><command+v><return>`
 
 Explanation: I cloned the fork of the lab 7 repository provided to us using `git clone` and pasted the `SSH` clone url from github account.
 
