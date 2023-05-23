@@ -49,7 +49,7 @@ The following image shows the tests running successfully after making edits to L
 
 
 ## Step 6: Commit and push the resulting change to your Github account
-Keys pressed: `git<space>add<space>--all<enter>`, `git<space>commit<space>-m<space>"Editing<space>ListExamples.java`, `git<space>push`
+Keys pressed: `git<space>add<space>--all<enter>`, `git<space>commit<space>-m<space>"Editing<space>ListExamples.java"`, `git<space>push`
 
 Explanation: First, I added all the files to my github using `git add --all`. Then I used `git commit` to commit the changes I made using the message `Editing ListExamples.java`. Finally, I pushed these changes to github using `git push`
 
