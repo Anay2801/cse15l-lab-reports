@@ -33,6 +33,7 @@ Oh yes! It makes sense now. It should have been arr[mid] < target to correctly n
 **File Structure:**
 
 ![Image](file.png)
+
 **Files Before Bug Fixes:**
 **BinarySearch.java**
 ```
