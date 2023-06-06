@@ -31,7 +31,7 @@ Oh yes! It makes sense now. It should have been arr[mid] < target to correctly n
 
 ### Final information
 **Files Before Bug Fixes:**
-**BinarySearch.java -**
+**BinarySearch.java**
 ```
 public class BinarySearch {
   public static int binarySearch(int[] arr, int target) {
@@ -54,7 +54,7 @@ public class BinarySearch {
   }
 }
 ```
-**BinarySearchTest.java - **
+**BinarySearchTest.java**
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -72,16 +72,16 @@ public class BinarySearchTest {
 }
 ```
 
-**test.sh -**
+**test.sh**
 ```
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore BinarySearchTest
 ```
 
-**Command that induced the bug:**
+**The command on the terminal that induced the bug:**
 ```bash test.sh```
 
-**ListExamples.java after fix:**
+**BinarySearch.java after fixing the bug:**
 ```
 public class BinarySearch {
   public static int binarySearch(int[] arr, int target) {
