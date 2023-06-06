@@ -30,6 +30,9 @@ Hi, I would like to draw ur attention to the conditional statements. There is a 
 Oh yes! It makes sense now. It should have been arr[mid] < target to correctly narrow down the search space when the target value is greater than the middle element. If the middle value is greater than the target element (as was in my buggy case), incrementing the value of low does not make sense.
 
 ### Final information
+**File Structure:**
+
+![Image](file.png)
 **Files Before Bug Fixes:**
 **BinarySearch.java**
 ```
