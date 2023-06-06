@@ -8,23 +8,23 @@ I'm on a Mac and using Visual Studio Code.
 **Detail the symptom you're seeing. Be specific; include both what you're seeing and what you expected to see instead. Screenshots are great, copy-pasted terminal output is also great. Avoid saying “it doesn't work”.**
 Hey, I have written an algorithm for binary search, however, it does not seem to return the correct index of the value being searched. Here is my code:
 
-![Image]()
+![Image](main.png)
 
 I tested it using the following JUnit test case:
 
-![Image]()
+![Image](test.png)
 
 
 **Detail the failure-inducing input and context. That might mean any or all of the command you're running, a test case, command-line arguments, working directory, even the last few commands you ran. Do your best to provide as much context as you can.**
 I ran the JUnit test case above using the following the bash script:
 
-![Image]()
+![Image](bash.png)
 
 ### Response from the TA
-Hi, I would like to draw ur attention to assigning values to low and high in the `else if` and `else` statements. There is a logical error when you assign these values. The aim is to narrow down the search area. Try fiddling with these 2 values and understand the logic behind the assignment. You should be able to find the error in a while. Let me know if you have any further questions!
+Hi, I would like to draw ur attention to the conditional statements. There is a logical error in one of them. The aim is to narrow down the search area. By trying to understand the logic of the search, you should be able to correct the statement soon. A further hint: look at the else if statement. Let me know if you have any further questions!
 
 ### Student's response to the TA
-Oh yes! It makes sense now. I searched the wrong part of the array. When the target value is less than the middle element, I subtracted 1 from low and added 1 to high, which leads to an incorrect narrowing down of the search space. Instead, I should have added to low and subtracted from high.
+Oh yes! It makes sense now. It should have been arr[mid] < target to correctly narrow down the search space when the target value is greater than the middle element. If the middle value is greater than the target element (as was in my buggy case), incrementing the value of low does not make sense.
 
 ### Final information
 **Files Before Bug Fixes:**
@@ -40,10 +40,10 @@ public class BinarySearch {
 
           if (arr[mid] == target) {
               return mid; 
-          } else if (arr[mid] < target) {
-              low = mid - 1; 
+          } else if (arr[mid] > target) {
+              low = mid + 1; 
           } else {
-              high = mid + 1; 
+              high = mid - 1; 
           }
       }
 
@@ -79,9 +79,31 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 ```bash test.sh```
 
 **ListExamples.java after fix:**
+```
+public class BinarySearch {
+  public static int binarySearch(int[] arr, int target) {
+      int low = 0;
+      int high = arr.length - 1;
+
+      while (low <= high) {
+          int mid = (low + high) / 2;
+
+          if (arr[mid] == target) {
+              return mid; 
+          } else if (arr[mid] < target) {
+              low = mid + 1; 
+          } else {
+              high = mid - 1; 
+          }
+      }
+
+      return -1; 
+  }
+}
+```
 
 **Terminal after fixes:**
-
+![Image](output2.png)
 
 ## Part 2 - Reflection
 For me, the usage of Vim and the concept of doing all tasks from the command line was the most useful and interesting. Before this class, I had never heard of Vim. The fact that I could view and edit files in another computer (using ssh) was the useful and fascinating component of my lab experience in the second half of the quarter.
