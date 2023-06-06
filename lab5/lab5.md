@@ -3,7 +3,7 @@
 ## Part 1
 ### Post from the Student
 **What environment are you using (computer, operating system, web browser, terminal/editor, and so on)?**
-I'm on a Mac and using Visual Studio Code.
+I am operating on macOS and using Visual Studio Code.
 
 **Detail the symptom you're seeing. Be specific; include both what you're seeing and what you expected to see instead. Screenshots are great, copy-pasted terminal output is also great. Avoid saying “it doesn't work”.**
 Hey, I have written an algorithm for binary search, however, it does not seem to return the correct index of the value being searched. Here is my code:
